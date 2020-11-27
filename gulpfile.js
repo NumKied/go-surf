@@ -1,24 +1,24 @@
-const {src, dest, parallel, series, watch} = require('gulp'),
-      browserSync = require('browser-sync').create(),
-      fileInclude = require('gulp-file-include'),
-      scss = require('gulp-sass'),
-      autoprefixer = require('gulp-autoprefixer'),
-      groupMedia = require('gulp-group-css-media-queries'),
-      cleanCss = require('gulp-clean-css'),
-      rename = require('gulp-rename'),
-      uglify = require('gulp-uglify-es').default,
-      del = require('del'),
-      imageMin = require('gulp-imagemin'),
-      webp = require('gulp-webp'),
-      ttf2woff = require('gulp-ttf2woff'),
-      ttf2woff2 = require('gulp-ttf2woff2'),
-      fonter = require('gulp-fonter'),
-      sourcemaps = require('gulp-sourcemaps'),
-      babel = require('gulp-babel');
+const { src, dest, parallel, series, watch } = require('gulp'),
+  browserSync = require('browser-sync').create(),
+  fileInclude = require('gulp-file-include'),
+  scss = require('gulp-sass'),
+  autoprefixer = require('gulp-autoprefixer'),
+  groupMedia = require('gulp-group-css-media-queries'),
+  cleanCss = require('gulp-clean-css'),
+  rename = require('gulp-rename'),
+  uglify = require('gulp-uglify-es').default,
+  del = require('del'),
+  imageMin = require('gulp-imagemin'),
+  webp = require('gulp-webp'),
+  ttf2woff = require('gulp-ttf2woff'),
+  ttf2woff2 = require('gulp-ttf2woff2'),
+  fonter = require('gulp-fonter'),
+  sourcemaps = require('gulp-sourcemaps'),
+  babel = require('gulp-babel');
 
 const project_folder = 'dist',
-      source_folder = 'src',
-      isOnline = true;
+  source_folder = 'src',
+  isOnline = true;
 
 const paths = {
   build: {
@@ -32,14 +32,14 @@ const paths = {
     html: [`${source_folder}/*.html`, `!${source_folder}/_*.html`],
     css: `${source_folder}/scss/app.scss`,
     js: `${source_folder}/js/main.js`,
-    img: `${source_folder}/img/**/*.{jpg, png, svg, gif, ico, webp}`,
+    img: `${source_folder}/img/**/*`,
     fonts: `${source_folder}/fonts/**/*.ttf`
   },
   watch: {
     html: `${source_folder}/**/*.html`,
     css: `${source_folder}/scss/**/*.scss`,
     js: `${source_folder}/js/**/*.js`,
-    img: `${source_folder}/img/**/*.{jpg, png, svg, gif, ico, webp}`,
+    img: `${source_folder}/img/**/*`,
     fonts: `${source_folder}/fonts/**/*.ttf`
   },
   clean: `${project_folder}/`
@@ -47,7 +47,7 @@ const paths = {
 
 function sync() {
   browserSync.init({
-    server: {baseDir: `./${project_folder}/`},
+    server: { baseDir: `./${project_folder}/` },
     notify: false,
     online: isOnline
   })
@@ -63,12 +63,12 @@ function html() {
 function css() {
   return src(paths.src.css)
     .pipe(sourcemaps.init())
-    .pipe(scss({outputStyle: 'expanded'}))
+    .pipe(scss({ outputStyle: 'expanded' }))
     // .pipe(groupMedia())
-    .pipe(autoprefixer({overrideBrowserslist: ['last 5 versions']}))
+    .pipe(autoprefixer({ overrideBrowserslist: ['last 5 versions'] }))
     .pipe(dest(paths.build.css))
     .pipe(cleanCss())
-    .pipe(rename({extname: '.min.css'}))
+    .pipe(rename({ extname: '.min.css' }))
     .pipe(sourcemaps.write('.'))
     .pipe(dest(paths.build.css))
     .pipe(browserSync.stream())
@@ -77,11 +77,11 @@ function css() {
 function js() {
   return src(paths.src.js)
     .pipe(sourcemaps.init())
-    .pipe(fileInclude({prefix: '~'}))
-    .pipe(babel({presets: ['@babel/env']}))
+    .pipe(fileInclude({ prefix: '~' }))
+    .pipe(babel({ presets: ['@babel/env'] }))
     .pipe(dest(paths.build.js))
     .pipe(uglify())
-    .pipe(rename({extname: '.min.js'}))
+    .pipe(rename({ extname: '.min.js' }))
     .pipe(sourcemaps.write('.'))
     .pipe(dest(paths.build.js))
     .pipe(browserSync.stream())
@@ -95,13 +95,13 @@ function images() {
     .pipe(dest(paths.build.img))
     .pipe(src(paths.src.img))
     .pipe(imageMin([
-      imageMin.gifsicle({interlaced: true}),
-      imageMin.mozjpeg({quality: 75, progressive: true}),
-      imageMin.optipng({optimizationLevel: 5}),
+      imageMin.gifsicle({ interlaced: true }),
+      imageMin.mozjpeg({ quality: 75, progressive: true }),
+      imageMin.optipng({ optimizationLevel: 5 }),
       imageMin.svgo({
         plugins: [
-          {removeViewBox: true},
-          {cleanupIDs: false}
+          { removeViewBox: true },
+          { cleanupIDs: false }
         ]
       })
     ]))
@@ -126,7 +126,7 @@ function clean() {
 
 function toTtf() {
   return src(`${source_folder}/fonts/**/*.otf`)
-    .pipe(fonter({formats: ['ttf']}))
+    .pipe(fonter({ formats: ['ttf'] }))
     .pipe(dest(`${source_folder}/fonts/`))
 }
 
