@@ -1,0 +1,116 @@
+.surf {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 157px 80px 120px 0;
+  &__bg-title {
+    position: absolute;
+    top: 192px;
+    left: 0;
+  }
+  &__title {
+    display: inline-block;
+    padding-left: 245px;
+    margin-bottom: 70px;
+  }
+  &__geolocation-bg {
+    position: absolute;
+    top: 220px;
+    right: 0;
+    width: 295px;
+    height: 350px;
+    transform: translateX(50%);
+  }
+}
+
+.surf-slider {
+  position: relative;
+  padding-top: 110px;
+  margin-right: -80px;
+  &__arrows {
+    position: absolute;
+    top: 58px;
+    right: 80px;
+    z-index: 2;
+    button {
+      width: 25px;
+      height: 20px;
+      border: none;
+      opacity: .25;
+      background-color: transparent;
+      cursor: pointer;
+      &:nth-of-type(1) {
+        margin-right: 20px;
+      }
+    }
+  }
+  .slider-item {
+    position: relative;
+    min-height: 750px;
+    padding: 72px 0 0 40px;
+    background: no-repeat center/cover;
+    &:nth-of-type(4n + 1) {
+      margin-top: 32px;
+    }
+    &:nth-of-type(4n + 3) {
+      margin-top: 89px;
+    }
+    &.slick-current, &:hover {
+      .slider-item__overlay {
+        transition: 1s;
+        opacity: .3;
+      }
+      .slider-item__link {
+        transition: 1s;
+        opacity: 1;
+      }
+    }
+    &__overlay {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: $overlay;
+      opacity: .85;
+    }
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      min-height: 678px;
+      z-index: 1;
+    }
+    &__title {
+      word-spacing: 750px;
+    }
+    &__location {
+      display: flex;
+      position: absolute;
+      left: 38px;
+      bottom: 80px;
+      color: $white;
+      font-family: Fira Sans;
+      font-size: 18px;
+      line-height: 1.22;
+      letter-spacing: 8px;
+      text-transform: uppercase;
+      transform: rotate(-90deg) translateY(-100%);
+      transform-origin: top left;
+      .divider {
+        font-weight: 100;
+      }
+    }
+    &__link {
+      opacity: 0;
+      height: 80px;
+    }
+  }
+}
+
+@media (max-width: 2200px) {
+  .surf {
+    overflow: hidden;
+  }
+}

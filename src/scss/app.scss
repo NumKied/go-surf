@@ -10,7 +10,18 @@
 
 @import './other/container';
 
+@import './other/animations';
+
 @import './other/base';
 
 // Sections
 
+@import './sections/hero';
+
+@import './sections/surf';
+
+@import './sections/travel';
+
+@import './sections/sleep';
+
+@import './sections/shop';

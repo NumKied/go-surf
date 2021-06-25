@@ -26,21 +26,24 @@ const paths = {
     css: `${project_folder}/css/`,
     js: `${project_folder}/js/`,
     img: `${project_folder}/img/`,
-    fonts: `${project_folder}/fonts/`
+    fonts: `${project_folder}/fonts/`,
+    libs: `${project_folder}/libs/`
   },
   src: {
     html: [`${source_folder}/*.html`, `!${source_folder}/_*.html`],
     css: `${source_folder}/scss/app.scss`,
     js: `${source_folder}/js/main.js`,
     img: `${source_folder}/img/**/*`,
-    fonts: `${source_folder}/fonts/**/*.ttf`
+    fonts: `${source_folder}/fonts/**/*.ttf`,
+    libs: `${source_folder}/libs/**/*`
   },
   watch: {
     html: `${source_folder}/**/*.html`,
     css: `${source_folder}/scss/**/*.scss`,
     js: `${source_folder}/js/**/*.js`,
     img: `${source_folder}/img/**/*`,
-    fonts: `${source_folder}/fonts/**/*.ttf`
+    fonts: `${source_folder}/fonts/**/*.ttf`,
+    libs: `${source_folder}/libs/**/*`
   },
   clean: `${project_folder}/`
 }
@@ -109,6 +112,12 @@ function images() {
     .pipe(browserSync.stream())
 }
 
+function libs() {
+  return src(paths.src.libs)
+    .pipe(dest(paths.build.libs))
+    .pipe(browserSync.stream())
+}
+
 function fonts() {
   return src(paths.src.fonts)
     .pipe(ttf2woff())
@@ -135,9 +144,10 @@ function watching() {
   watch([paths.watch.css], css);
   watch([paths.watch.js], js);
   watch([paths.watch.img], images);
+  watch([paths.watch.libs], libs);
 }
 
-const build = series(clean, parallel(js, css, html, images, fonts))
+const build = series(clean, parallel(js, css, html, images, fonts, libs))
 const mainTask = parallel(build, watching, sync);
 
 exports.toTtf = toTtf;
@@ -146,6 +156,7 @@ exports.images = images;
 exports.js = js;
 exports.css = css;
 exports.html = html;
+exports.libs = libs;
 exports.build = build;
 exports.mainTask = mainTask;
 exports.default = mainTask;
