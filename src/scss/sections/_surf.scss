@@ -2,7 +2,7 @@
   position: relative;
   width: 100%;
   min-height: 100vh;
-  padding: 157px 80px 120px 0;
+  padding: 157px 0 120px;
   &__bg-title {
     position: absolute;
     top: 192px;
@@ -13,6 +13,9 @@
     padding-left: 245px;
     margin-bottom: 70px;
   }
+  &__current-location {
+    margin-right: 80px;
+  }
   &__geolocation-bg {
     position: absolute;
     top: 220px;
@@ -21,12 +24,168 @@
     height: 350px;
     transform: translateX(50%);
   }
+  &__coordinates {
+    position: absolute;
+    top: 538px;
+    right: 80px;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 8px;
+    color: $white;
+    text-transform: uppercase;
+    opacity: .25;
+    transform: rotate(-90deg);
+    transform-origin: bottom right;
+  }
+}
+
+.surf-map {
+  // max-width: 1200px;
+  // max-height: 635px;
+  width: 1200px;
+  height: 635px;
+  margin: -22px auto 0;
+  background: no-repeat center/cover;
+  &__locations {
+
+  }
+}
+
+.surf-locations {
+  position: relative;
+  &__location {
+
+  }
+}
+
+.surf-location {
+  position: absolute;
+  &:nth-of-type(1) {
+    top: 330px;
+    left: -13px;
+  }
+  &:nth-of-type(2) {
+    top: 290px;
+    left: 136px;
+  }
+  &:nth-of-type(3) {
+    top: 318px;
+    left: 338px;
+  }
+  &:nth-of-type(4) {
+    top: 501px;
+    left: 413px;
+  }
+  &:nth-of-type(5) {
+    top: 212px;
+    left: 530px;
+  }
+  &:nth-of-type(6) {
+    top: 555px;
+    left: 637px;
+  }
+  &:nth-of-type(7) {
+    top: 395px;
+    left: 798px;
+  }
+  &:nth-of-type(8) {
+    top: 480.5px;
+    left: 1089.5px;
+  }
+  &_active {
+    .surf-location__dot {
+      &::before {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-bottom: 20px solid $main;
+        border-left: 13px solid transparent;
+        border-right: 13px solid transparent;
+        top: -10px;
+        left: -1px;
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+      }
+    }
+    .surf-location__content {
+      opacity: 1;
+    }
+  }
+  &__dot {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: $main;
+    cursor: pointer;
+  }
+  &__content {
+    padding: 28px 32px;
+    border-radius: 6px;
+    background-color: rgba($location-card-bg, .7);
+    transform: translate(calc(-50% + 12px), calc(-100% - 50px));
+    opacity: 0;
+    transition: .5s;
+    pointer-events: none;
+  }
+  &__upper-part {
+    margin-bottom: 30px;
+  }
+  &__title-wrapper {
+    display: flex;
+    margin-bottom: 14px;
+  }
+  &__title {
+    position: relative;
+    margin-right: 94px;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 1.44;
+    color: $white;
+    white-space: nowrap;
+    text-transform: uppercase;
+  }
+  &__link {
+    img {
+      width: 16px;
+      height: 13px;
+    }
+  }
+  &__subtitle {
+    font-size: 16px;
+    line-height: 1.18;
+    color: $white;
+  }
+  &__bottom-part {}
+  &__info-list {}
+  .location-list {
+    display: flex;
+    &__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 33.3333%;
+    }
+    &__item-img {}
+    &__item-value {
+      font-weight: 800;
+      font-size: 16px;
+      line-height: 1.43;
+      color: $white;
+    }
+    &__item-description {
+      font-weight: 300;
+      font-size: 10px;
+      line-height: 1.2;
+      color: $white;
+    }
+  }
 }
 
 .surf-slider {
   position: relative;
   padding-top: 110px;
-  margin-right: -80px;
   &__arrows {
     position: absolute;
     top: 58px;
@@ -57,11 +216,9 @@
     }
     &.slick-current, &:hover {
       .slider-item__overlay {
-        transition: 1s;
         opacity: .3;
       }
       .slider-item__link {
-        transition: 1s;
         opacity: 1;
       }
     }
@@ -73,6 +230,7 @@
       left: 0;
       background-color: $overlay;
       opacity: .85;
+      transition: 1s;
     }
     &__wrapper {
       display: flex;
@@ -103,8 +261,9 @@
       }
     }
     &__link {
-      opacity: 0;
       height: 80px;
+      opacity: 0;
+      transition: 1s;
     }
   }
 }

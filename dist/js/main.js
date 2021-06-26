@@ -14,7 +14,8 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 
 $(function () {
   var shoresList = $('.shores-list')[0].children,
-      shoresItems = [].concat(_toConsumableArray($('.shore-active')), _toConsumableArray($('.shore-name')), _toConsumableArray($('.shore-path'))); // Hero slider
+      shoresItems = [].concat(_toConsumableArray($('.shore-active')), _toConsumableArray($('.shore-name')), _toConsumableArray($('.shore-path'))),
+      surfMapDots = $('.surf-location__dot'); // Hero slider
 
   $('.hero-slick-slider').slick({
     infinite: true,
@@ -47,5 +48,24 @@ $(function () {
     slidesToScroll: 1,
     prevArrow: $('.surf-prev-arrow'),
     nextArrow: $('.surf-next-arrow')
+  }); // TODO:
+
+  $('.surf-slick-slider').on('afterChange', function (slick, currentSlide) {
+    for (var i = 0; i < surfMapDots.length; i++) {
+      surfMapDots[i].parentElement.classList.remove('surf-location_active');
+    }
+
+    surfMapDots[currentSlide.currentSlide].parentElement.classList.add('surf-location_active');
   });
+
+  for (var i = 0; i < surfMapDots.length; i++) {
+    surfMapDots[i].addEventListener('click', function (event) {
+      for (var _i2 = 0; _i2 < surfMapDots.length; _i2++) {
+        surfMapDots[_i2].parentElement.classList.remove('surf-location_active');
+      }
+
+      event.target.parentElement.classList.add('surf-location_active');
+      $('.surf-slick-slider').slick('slickGoTo', event.target.parentElement.dataset.number, false);
+    });
+  }
 });
