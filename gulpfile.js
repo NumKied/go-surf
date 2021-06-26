@@ -147,7 +147,7 @@ function watching() {
   watch([paths.watch.libs], libs);
 }
 
-const build = series(clean, parallel(js, css, html, images, fonts, libs))
+const build = series(clean, parallel(js, css, html, images, fonts, libs));
 const mainTask = parallel(build, watching, sync);
 
 exports.toTtf = toTtf;

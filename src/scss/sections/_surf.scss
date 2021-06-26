@@ -46,16 +46,10 @@
   height: 635px;
   margin: -22px auto 0;
   background: no-repeat center/cover;
-  &__locations {
-
-  }
 }
 
 .surf-locations {
   position: relative;
-  &__location {
-
-  }
 }
 
 .surf-location {
@@ -157,8 +151,6 @@
     line-height: 1.18;
     color: $white;
   }
-  &__bottom-part {}
-  &__info-list {}
   .location-list {
     display: flex;
     &__item {
@@ -167,7 +159,6 @@
       align-items: center;
       width: 33.3333%;
     }
-    &__item-img {}
     &__item-value {
       font-weight: 800;
       font-size: 16px;
