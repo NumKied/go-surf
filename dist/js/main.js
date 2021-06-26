@@ -15,7 +15,9 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 $(function () {
   var shoresList = $('.shores-list')[0].children,
       shoresItems = [].concat(_toConsumableArray($('.shore-active')), _toConsumableArray($('.shore-name')), _toConsumableArray($('.shore-path'))),
-      surfMapDots = $('.surf-location__dot'); // Hero slider
+      surfMapDots = $('.surf-location__dot'),
+      surfNextSlideArrow = $('.surf-next-arrow')[0],
+      surfPrevSlideArrow = $('.surf-prev-arrow')[0]; // Hero slider
 
   $('.hero-slick-slider').slick({
     infinite: true,
@@ -46,17 +48,25 @@ $(function () {
   $('.surf-slick-slider').slick({
     slidesToShow: 4,
     slidesToScroll: 1,
-    prevArrow: $('.surf-prev-arrow'),
-    nextArrow: $('.surf-next-arrow')
-  }); // TODO:
+    arrows: false
+  });
+  surfNextSlideArrow.addEventListener('click', function () {
+    changeActiveLocation(true);
+    $('.surf-slick-slider').slick('slickNext');
+  });
+  surfPrevSlideArrow.addEventListener('click', function () {
+    changeActiveLocation(false);
+    $('.surf-slick-slider').slick('slickPrev');
+  });
 
-  $('.surf-slick-slider').on('afterChange', function (slick, currentSlide) {
+  var changeActiveLocation = function changeActiveLocation(toNextSlide) {
     for (var i = 0; i < surfMapDots.length; i++) {
       surfMapDots[i].parentElement.classList.remove('surf-location_active');
     }
 
-    surfMapDots[currentSlide.currentSlide].parentElement.classList.add('surf-location_active');
-  });
+    var currentSlide = $('.surf-slick-slider').slick('slickCurrentSlide');
+    surfMapDots[currentSlide + (toNextSlide ? 1 : -1)].parentElement.classList.add('surf-location_active');
+  };
 
   for (var i = 0; i < surfMapDots.length; i++) {
     surfMapDots[i].addEventListener('click', function (event) {
