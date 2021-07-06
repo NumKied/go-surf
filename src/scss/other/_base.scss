@@ -136,3 +136,18 @@ body {
     font-weight: 100;
   }
 }
+
+.slider-arrows {
+  z-index: 2;
+  button {
+    width: 25px;
+    height: 20px;
+    border: none;
+    opacity: .25;
+    background-color: transparent;
+    cursor: pointer;
+    &:nth-of-type(1) {
+      margin-right: 20px;
+    }
+  }
+}

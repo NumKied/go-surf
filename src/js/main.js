@@ -65,4 +65,12 @@ $(() => {
       $('.surf-slick-slider').slick('slickGoTo', event.target.parentElement.dataset.number, false);
     });
   }
+
+  // Travel slider
+  $('.travel-slick-slider').slick({
+    infinite: true,
+    fade: true,
+    prevArrow: $('.travel-prev-arrow'),
+    nextArrow: $('.travel-next-arrow')
+  });
 });
