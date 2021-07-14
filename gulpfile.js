@@ -96,6 +96,8 @@ function images() {
       quality: 70
     }))
     .pipe(dest(paths.build.img))
+    .pipe(src(paths.src.img))
+    .pipe(dest(paths.build.img))
     .pipe(browserSync.stream())
 }
 

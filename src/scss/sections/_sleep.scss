@@ -1,16 +1,29 @@
 .sleep {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  padding: 157px 80px 0 0;
-  &__bg-title {
+  padding: 157px 0 141px;
+  &__flower {
     position: absolute;
-    top: 192px;
-    left: 0;
+    bottom: 116px;
+    right: -160px;
   }
-  &__title {
-    display: inline-block;
-    padding-left: 245px;
-    margin-bottom: 170px;
+}
+
+.default-slider {
+  .slider-item {
+    &__hammock-image {
+      position: absolute;
+      top: 410px;
+      right: -72px;
+      img {
+        width: 565px;
+        height: 385px;
+      }
+    }
+    &__rating-star {
+      width: 22px;
+      height: 22px;
+    }
+  }
+  .slider-item__rating-star + .slider-item__rating-star {
+    margin-left: 11px;
   }
 }

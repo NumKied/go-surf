@@ -1,52 +1,15 @@
 .travel {
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
   padding: 157px 0 154px;
-  &__bg-title {
-    position: absolute;
-    top: 192px;
-    left: 0;
-  }
-  &__title {
-    display: inline-block;
-    padding-left: 245px;
-    margin-bottom: 170px;
-  }
   &__cocktail {
     position: absolute;
     bottom: -90px;
     right: -242px;
+    z-index: -1;
   }
 }
 
-.travel-slider {
-  position: relative;
-  &__item {
-
-  }
-  &__arrows {
-    position: absolute;
-    top: 125px;
-    right: 80px;
-  }
+.default-slider {
   .slider-item {
-    position: relative;
-    &__location {
-      margin-bottom: 494px;
-      margin-right: 80px;
-    }
-    &__bg-image {
-      position: absolute;
-      top: -92px;
-      left: 0;
-      background-color: $bg;
-      z-index: -1;
-      img {
-        width: 1115px;
-        height: 780px;
-      }
-    }
     &__airplane-image {
       position: absolute;
       top: 458px;
@@ -57,81 +20,5 @@
         height: 250px;
       }
     }
-    &__airline {
-      margin-bottom: 120px;
-      margin-left: 135px;
-    }
-    &__airline-suptitle {
-      margin-bottom: 8px;
-    }
-    &__airline-title {
-      display: flex;
-      align-items: center;
-    }
-    &__airline-logo {
-      margin-left: 26px;
-    }
-    &__travel-info {
-      margin-bottom: 66px;
-      margin-left: 157px;
-    }
-    &__book-flight {
-      display: flex;
-      justify-content: center;
-      height: 80px;
-    }
-  }
-  .slick-list {
-    overflow: visible;
-  }
-  .slick-arrow.slick-hidden {
-    display: inline-block;
-  }
-}
-
-.travel-info {
-  display: flex;
-  height: 195px;
-  margin-right: -57px;
-  &__item {
-    position: relative;
-    width: calc(25% - 57px);
-    margin-right: 57px;
-  }
-  &__item-wrapper {
-    display: inline-block;
-  }
-  &__item-description {
-    display: flex;
-    justify-content: flex-end;
-    position: absolute;
-    width: 195px;
-    top: 167px;
-    left: 0;
-    font-size: 18px;
-    line-height: 1.22;
-    letter-spacing: 8px;
-    color: rgba($white, .5);
-    text-transform: uppercase;
-    transform: rotate(-90deg);
-    transform-origin: bottom left;
-  }
-  &__item-value {
-    margin-left: 18px;
-  }
-  &__item-round {
-    display: flex;
-    justify-content: flex-end;
-    font-size: 14px;
-    line-height: 2.5;
-    letter-spacing: 5.25px;
-    color: rgba($white, .75);
-    text-transform: uppercase;
-  }
-}
-
-@media (max-width: 2200px) {
-  .travel {
-    overflow: hidden;
   }
 }

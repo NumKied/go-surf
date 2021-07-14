@@ -1,18 +1,5 @@
 .surf {
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
   padding: 157px 0 120px;
-  &__bg-title {
-    position: absolute;
-    top: 192px;
-    left: 0;
-  }
-  &__title {
-    display: inline-block;
-    padding-left: 245px;
-    margin-bottom: 70px;
-  }
   &__current-location {
     margin-right: 80px;
   }
@@ -244,11 +231,5 @@
       opacity: 0;
       transition: 1s;
     }
-  }
-}
-
-@media (max-width: 2200px) {
-  .surf {
-    overflow: hidden;
   }
 }

@@ -1,20 +1,664 @@
-<section class="sleep">
+<section class="sleep default-section">
   <!-- Page Title -->
-  <div class="sleep__bg-title title title_page">
+  <div class="default-section__bg-title title title_page">
     Sleep
   </div>
   <!-- /Page Title -->
 
-  <div class="sleep__title title title_big line line_top">
+  <div class="default-section__title title title_big line line_top">
     Sleep
   </div>
 
-  <div class="sleep__current-location current-location">
-    <div class="current-location__suptitle suptitle line line_left">Resorts</div>
-    <div class="current-location__title location">
-      <span class="location__town">Auberge</span>
-      <span class="location__divider">&nbsp;|&nbsp;</span>
-      <span class="location__country">Australia</span>
+    <!-- Slider -->
+    <div class="sleep__slider sleep-slider default-slider">
+      <div class="sleep-slick-slider">
+        <div class="sleep-slider__item slider-item">
+          <div class="slider-item__location current-location">
+            <div class="current-location__suptitle suptitle line line_left">Resorts</div>
+            <div class="current-location__title location">
+              <span class="location__town">Auberge</span>
+              <span class="location__divider">&nbsp;|&nbsp;</span>
+              <span class="location__country">Australia</span>
+            </div>
+          </div>
+          <div class="slider-item__bg-image">
+            <img src="img/sleep/sleep-slide-bg-1.png" alt="Sleep Slide Backgorund Image">
+          </div>
+          <div class="slider-item__hammock-image">
+            <img src="img/sleep/sleep-slide-hammock-1.png" alt="Sleep Slide hammock Image">
+          </div>
+          <div class="slider-item__rating">
+            <div class="slider-item__rating-suptitle suptitle line line_right">Rating</div>
+            <div class="slider-item__rating-title title title_normal">
+              Excellent
+              <div class="slider-item__rating-stars">
+                <img class="slider-item__rating-star" src="img/icons/star.svg" alt="Star Icon">
+                <img class="slider-item__rating-star" src="img/icons/star.svg" alt="Star Icon">
+                <img class="slider-item__rating-star" src="img/icons/star.svg" alt="Star Icon">
+                <img class="slider-item__rating-star" src="img/icons/star.svg" alt="Star Icon">
+              </div>
+            </div>
+          </div>
+
+          <ul class="slider-item__sleep-info sleep-info default-slide-info">
+            <li class="default-slide-info__item">
+              <div class="default-slide-info__item-description">Resort</div>
+              <div class="default-slide-info__item-wrapper">
+                <div class="default-slide-info__item-value title title_normal">Auberge Australia</div>
+              </div>
+            </li>
+            <li class="default-slide-info__item">
+              <div class="default-slide-info__item-description"># of Nights</div>
+              <div class="default-slide-info__item-wrapper">
+                <div class="default-slide-info__item-value title title_normal">
+                  <span>5</span>&nbsp;Nights
+                </div>
+                <div class="default-slide-info__item-calc">
+                  <img src="img/icons/minus.svg" alt="Minus Icon" onclick="changeNumber(event, 'minus')">
+                  <img src="img/icons/plus.svg" alt="Plus Icon" onclick="changeNumber(event, 'plus')">
+                </div>
+              </div>
+            </li>
+            <li class="default-slide-info__item">
+              <div class="default-slide-info__item-description"># of Guests</div>
+              <div class="default-slide-info__item-wrapper">
+                <div class="default-slide-info__item-value title title_normal">
+                  <span>4</span>&nbsp;Guests
+                </div>
+                <div class="default-slide-info__item-calc">
+                  <img src="img/icons/minus.svg" alt="Minus Icon" onclick="changeNumber(event, 'minus')">
+                  <img src="img/icons/plus.svg" alt="Plus Icon" onclick="changeNumber(event, 'plus')">
+                </div>
+              </div>
+            </li>
+            <li class="default-slide-info__item">
+              <div class="default-slide-info__item-description">Pricing</div>
+              <div class="default-slide-info__item-wrapper">
+                <div class="default-slide-info__item-value title title_normal">$349 USD</div>
+                <div class="default-slide-info__item-round">Per Night</div>
+              </div>
+            </li> 
+          </ul>
+
+          <div class="slider-item__book-stay to-action">
+            <div class="to-action__first-half">
+              Book
+            </div>
+            <a href="#">
+              <div class="to-action__second-half">
+                Stay
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="sleep-slider__item slider-item">
+          <div class="slider-item__location current-location">
+            <div class="current-location__suptitle suptitle line line_left">Resorts</div>
+            <div class="current-location__title location">
+              <span class="location__town">Auberge</span>
+              <span class="location__divider">&nbsp;|&nbsp;</span>
+              <span class="location__country">Australia</span>
+            </div>
+          </div>
+          <div class="slider-item__bg-image">
+            <img src="img/sleep/sleep-slide-bg-1.png" alt="Sleep Slide Backgorund Image">
+          </div>
+          <div class="slider-item__hammock-image">
+            <img src="img/sleep/sleep-slide-hammock-1.png" alt="Sleep Slide hammock Image">
+          </div>
+          <div class="slider-item__rating">
+            <div class="slider-item__rating-suptitle suptitle line line_right">Rating</div>
+            <div class="slider-item__rating-title title title_normal">
+              Excellent
+              <div class="slider-item__rating-stars">
+                <img class="slider-item__rating-star" src="img/icons/star.svg" alt="Star Icon">
+                <img class="slider-item__rating-star" src="img/icons/star.svg" alt="Star Icon">
+                <img class="slider-item__rating-star" src="img/icons/star.svg" alt="Star Icon">
+                <img class="slider-item__rating-star" src="img/icons/star.svg" alt="Star Icon">
+              </div>
+            </div>
+          </div>
+
+          <ul class="slider-item__sleep-info sleep-info default-slide-info">
+            <li class="default-slide-info__item">
+              <div class="default-slide-info__item-description">Resort</div>
+              <div class="default-slide-info__item-wrapper">
+                <div class="default-slide-info__item-value title title_normal">Auberge Australia</div>
+              </div>
+            </li>
+            <li class="default-slide-info__item">
+              <div class="default-slide-info__item-description"># of Nights</div>
+              <div class="default-slide-info__item-wrapper">
+                <div class="default-slide-info__item-value title title_normal">
+                  <span>5</span>&nbsp;Nights
+                </div>
+                <div class="default-slide-info__item-calc">
+                  <img src="img/icons/minus.svg" alt="Minus Icon" onclick="changeNumber(event, 'minus')">
+                  <img src="img/icons/plus.svg" alt="Plus Icon" onclick="changeNumber(event, 'plus')">
+                </div>
+              </div>
+            </li>
+            <li class="default-slide-info__item">
+              <div class="default-slide-info__item-description"># of Guests</div>
+              <div class="default-slide-info__item-wrapper">
+                <div class="default-slide-info__item-value title title_normal">
+                  <span>4</span>&nbsp;Guests
+                </div>
+                <div class="default-slide-info__item-calc">
+                  <img src="img/icons/minus.svg" alt="Minus Icon" onclick="changeNumber(event, 'minus')">
+                  <img src="img/icons/plus.svg" alt="Plus Icon" onclick="changeNumber(event, 'plus')">
+                </div>
+              </div>
+            </li>
+            <li class="default-slide-info__item">
+              <div class="default-slide-info__item-description">Pricing</div>
+              <div class="default-slide-info__item-wrapper">
+                <div class="default-slide-info__item-value title title_normal">$349 USD</div>
+                <div class="default-slide-info__item-round">Per Night</div>
+              </div>
+            </li> 
+          </ul>
+
+          <div class="slider-item__book-stay to-action">
+            <div class="to-action__first-half">
+              Book
+            </div>
+            <a href="#">
+              <div class="to-action__second-half">
+                Stay
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="sleep-slider__item slider-item">
+          <div class="slider-item__location current-location">
+            <div class="current-location__suptitle suptitle line line_left">Resorts</div>
+            <div class="current-location__title location">
+              <span class="location__town">Auberge</span>
+              <span class="location__divider">&nbsp;|&nbsp;</span>
+              <span class="location__country">Australia</span>
+            </div>
+          </div>
+          <div class="slider-item__bg-image">
+            <img src="img/sleep/sleep-slide-bg-1.png" alt="Sleep Slide Backgorund Image">
+          </div>
+          <div class="slider-item__hammock-image">
+            <img src="img/sleep/sleep-slide-hammock-1.png" alt="Sleep Slide hammock Image">
+          </div>
+          <div class="slider-item__rating">
+            <div class="slider-item__rating-suptitle suptitle line line_right">Rating</div>
+            <div class="slider-item__rating-title title title_normal">
+              Excellent
+              <div class="slider-item__rating-stars">
+                <img class="slider-item__rating-star" src="img/icons/star.svg" alt="Star Icon">
+                <img class="slider-item__rating-star" src="img/icons/star.svg" alt="Star Icon">
+                <img class="slider-item__rating-star" src="img/icons/star.svg" alt="Star Icon">
+                <img class="slider-item__rating-star" src="img/icons/star.svg" alt="Star Icon">
+              </div>
+            </div>
+          </div>
+
+          <ul class="slider-item__sleep-info sleep-info default-slide-info">
+            <li class="default-slide-info__item">
+              <div class="default-slide-info__item-description">Resort</div>
+              <div class="default-slide-info__item-wrapper">
+                <div class="default-slide-info__item-value title title_normal">Auberge Australia</div>
+              </div>
+            </li>
+            <li class="default-slide-info__item">
+              <div class="default-slide-info__item-description"># of Nights</div>
+              <div class="default-slide-info__item-wrapper">
+                <div class="default-slide-info__item-value title title_normal">
+                  <span>5</span>&nbsp;Nights
+                </div>
+                <div class="default-slide-info__item-calc">
+                  <img src="img/icons/minus.svg" alt="Minus Icon" onclick="changeNumber(event, 'minus')">
+                  <img src="img/icons/plus.svg" alt="Plus Icon" onclick="changeNumber(event, 'plus')">
+                </div>
+              </div>
+            </li>
+            <li class="default-slide-info__item">
+              <div class="default-slide-info__item-description"># of Guests</div>
+              <div class="default-slide-info__item-wrapper">
+                <div class="default-slide-info__item-value title title_normal">
+                  <span>4</span>&nbsp;Guests
+                </div>
+                <div class="default-slide-info__item-calc">
+                  <img src="img/icons/minus.svg" alt="Minus Icon" onclick="changeNumber(event, 'minus')">
+                  <img src="img/icons/plus.svg" alt="Plus Icon" onclick="changeNumber(event, 'plus')">
+                </div>
+              </div>
+            </li>
+            <li class="default-slide-info__item">
+              <div class="default-slide-info__item-description">Pricing</div>
+              <div class="default-slide-info__item-wrapper">
+                <div class="default-slide-info__item-value title title_normal">$349 USD</div>
+                <div class="default-slide-info__item-round">Per Night</div>
+              </div>
+            </li> 
+          </ul>
+
+          <div class="slider-item__book-stay to-action">
+            <div class="to-action__first-half">
+              Book
+            </div>
+            <a href="#">
+              <div class="to-action__second-half">
+                Stay
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="sleep-slider__item slider-item">
+          <div class="slider-item__location current-location">
+            <div class="current-location__suptitle suptitle line line_left">Resorts</div>
+            <div class="current-location__title location">
+              <span class="location__town">Auberge</span>
+              <span class="location__divider">&nbsp;|&nbsp;</span>
+              <span class="location__country">Australia</span>
+            </div>
+          </div>
+          <div class="slider-item__bg-image">
+            <img src="img/sleep/sleep-slide-bg-1.png" alt="Sleep Slide Backgorund Image">
+          </div>
+          <div class="slider-item__hammock-image">
+            <img src="img/sleep/sleep-slide-hammock-1.png" alt="Sleep Slide hammock Image">
+          </div>
+          <div class="slider-item__rating">
+            <div class="slider-item__rating-suptitle suptitle line line_right">Rating</div>
+            <div class="slider-item__rating-title title title_normal">
+              Excellent
+              <div class="slider-item__rating-stars">
+                <img class="slider-item__rating-star" src="img/icons/star.svg" alt="Star Icon">
+                <img class="slider-item__rating-star" src="img/icons/star.svg" alt="Star Icon">
+                <img class="slider-item__rating-star" src="img/icons/star.svg" alt="Star Icon">
+                <img class="slider-item__rating-star" src="img/icons/star.svg" alt="Star Icon">
+              </div>
+            </div>
+          </div>
+
+          <ul class="slider-item__sleep-info sleep-info default-slide-info">
+            <li class="default-slide-info__item">
+              <div class="default-slide-info__item-description">Resort</div>
+              <div class="default-slide-info__item-wrapper">
+                <div class="default-slide-info__item-value title title_normal">Auberge Australia</div>
+              </div>
+            </li>
+            <li class="default-slide-info__item">
+              <div class="default-slide-info__item-description"># of Nights</div>
+              <div class="default-slide-info__item-wrapper">
+                <div class="default-slide-info__item-value title title_normal">
+                  <span>5</span>&nbsp;Nights
+                </div>
+                <div class="default-slide-info__item-calc">
+                  <img src="img/icons/minus.svg" alt="Minus Icon" onclick="changeNumber(event, 'minus')">
+                  <img src="img/icons/plus.svg" alt="Plus Icon" onclick="changeNumber(event, 'plus')">
+                </div>
+              </div>
+            </li>
+            <li class="default-slide-info__item">
+              <div class="default-slide-info__item-description"># of Guests</div>
+              <div class="default-slide-info__item-wrapper">
+                <div class="default-slide-info__item-value title title_normal">
+                  <span>4</span>&nbsp;Guests
+                </div>
+                <div class="default-slide-info__item-calc">
+                  <img src="img/icons/minus.svg" alt="Minus Icon" onclick="changeNumber(event, 'minus')">
+                  <img src="img/icons/plus.svg" alt="Plus Icon" onclick="changeNumber(event, 'plus')">
+                </div>
+              </div>
+            </li>
+            <li class="default-slide-info__item">
+              <div class="default-slide-info__item-description">Pricing</div>
+              <div class="default-slide-info__item-wrapper">
+                <div class="default-slide-info__item-value title title_normal">$349 USD</div>
+                <div class="default-slide-info__item-round">Per Night</div>
+              </div>
+            </li> 
+          </ul>
+
+          <div class="slider-item__book-stay to-action">
+            <div class="to-action__first-half">
+              Book
+            </div>
+            <a href="#">
+              <div class="to-action__second-half">
+                Stay
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="sleep-slider__item slider-item">
+          <div class="slider-item__location current-location">
+            <div class="current-location__suptitle suptitle line line_left">Resorts</div>
+            <div class="current-location__title location">
+              <span class="location__town">Auberge</span>
+              <span class="location__divider">&nbsp;|&nbsp;</span>
+              <span class="location__country">Australia</span>
+            </div>
+          </div>
+          <div class="slider-item__bg-image">
+            <img src="img/sleep/sleep-slide-bg-1.png" alt="Sleep Slide Backgorund Image">
+          </div>
+          <div class="slider-item__hammock-image">
+            <img src="img/sleep/sleep-slide-hammock-1.png" alt="Sleep Slide hammock Image">
+          </div>
+          <div class="slider-item__rating">
+            <div class="slider-item__rating-suptitle suptitle line line_right">Rating</div>
+            <div class="slider-item__rating-title title title_normal">
+              Excellent
+              <div class="slider-item__rating-stars">
+                <img class="slider-item__rating-star" src="img/icons/star.svg" alt="Star Icon">
+                <img class="slider-item__rating-star" src="img/icons/star.svg" alt="Star Icon">
+                <img class="slider-item__rating-star" src="img/icons/star.svg" alt="Star Icon">
+                <img class="slider-item__rating-star" src="img/icons/star.svg" alt="Star Icon">
+              </div>
+            </div>
+          </div>
+
+          <ul class="slider-item__sleep-info sleep-info default-slide-info">
+            <li class="default-slide-info__item">
+              <div class="default-slide-info__item-description">Resort</div>
+              <div class="default-slide-info__item-wrapper">
+                <div class="default-slide-info__item-value title title_normal">Auberge Australia</div>
+              </div>
+            </li>
+            <li class="default-slide-info__item">
+              <div class="default-slide-info__item-description"># of Nights</div>
+              <div class="default-slide-info__item-wrapper">
+                <div class="default-slide-info__item-value title title_normal">
+                  <span>5</span>&nbsp;Nights
+                </div>
+                <div class="default-slide-info__item-calc">
+                  <img src="img/icons/minus.svg" alt="Minus Icon" onclick="changeNumber(event, 'minus')">
+                  <img src="img/icons/plus.svg" alt="Plus Icon" onclick="changeNumber(event, 'plus')">
+                </div>
+              </div>
+            </li>
+            <li class="default-slide-info__item">
+              <div class="default-slide-info__item-description"># of Guests</div>
+              <div class="default-slide-info__item-wrapper">
+                <div class="default-slide-info__item-value title title_normal">
+                  <span>4</span>&nbsp;Guests
+                </div>
+                <div class="default-slide-info__item-calc">
+                  <img src="img/icons/minus.svg" alt="Minus Icon" onclick="changeNumber(event, 'minus')">
+                  <img src="img/icons/plus.svg" alt="Plus Icon" onclick="changeNumber(event, 'plus')">
+                </div>
+              </div>
+            </li>
+            <li class="default-slide-info__item">
+              <div class="default-slide-info__item-description">Pricing</div>
+              <div class="default-slide-info__item-wrapper">
+                <div class="default-slide-info__item-value title title_normal">$349 USD</div>
+                <div class="default-slide-info__item-round">Per Night</div>
+              </div>
+            </li> 
+          </ul>
+
+          <div class="slider-item__book-stay to-action">
+            <div class="to-action__first-half">
+              Book
+            </div>
+            <a href="#">
+              <div class="to-action__second-half">
+                Stay
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="sleep-slider__item slider-item">
+          <div class="slider-item__location current-location">
+            <div class="current-location__suptitle suptitle line line_left">Resorts</div>
+            <div class="current-location__title location">
+              <span class="location__town">Auberge</span>
+              <span class="location__divider">&nbsp;|&nbsp;</span>
+              <span class="location__country">Australia</span>
+            </div>
+          </div>
+          <div class="slider-item__bg-image">
+            <img src="img/sleep/sleep-slide-bg-1.png" alt="Sleep Slide Backgorund Image">
+          </div>
+          <div class="slider-item__hammock-image">
+            <img src="img/sleep/sleep-slide-hammock-1.png" alt="Sleep Slide hammock Image">
+          </div>
+          <div class="slider-item__rating">
+            <div class="slider-item__rating-suptitle suptitle line line_right">Rating</div>
+            <div class="slider-item__rating-title title title_normal">
+              Excellent
+              <div class="slider-item__rating-stars">
+                <img class="slider-item__rating-star" src="img/icons/star.svg" alt="Star Icon">
+                <img class="slider-item__rating-star" src="img/icons/star.svg" alt="Star Icon">
+                <img class="slider-item__rating-star" src="img/icons/star.svg" alt="Star Icon">
+                <img class="slider-item__rating-star" src="img/icons/star.svg" alt="Star Icon">
+              </div>
+            </div>
+          </div>
+
+          <ul class="slider-item__sleep-info sleep-info default-slide-info">
+            <li class="default-slide-info__item">
+              <div class="default-slide-info__item-description">Resort</div>
+              <div class="default-slide-info__item-wrapper">
+                <div class="default-slide-info__item-value title title_normal">Auberge Australia</div>
+              </div>
+            </li>
+            <li class="default-slide-info__item">
+              <div class="default-slide-info__item-description"># of Nights</div>
+              <div class="default-slide-info__item-wrapper">
+                <div class="default-slide-info__item-value title title_normal">
+                  <span>5</span>&nbsp;Nights
+                </div>
+                <div class="default-slide-info__item-calc">
+                  <img src="img/icons/minus.svg" alt="Minus Icon" onclick="changeNumber(event, 'minus')">
+                  <img src="img/icons/plus.svg" alt="Plus Icon" onclick="changeNumber(event, 'plus')">
+                </div>
+              </div>
+            </li>
+            <li class="default-slide-info__item">
+              <div class="default-slide-info__item-description"># of Guests</div>
+              <div class="default-slide-info__item-wrapper">
+                <div class="default-slide-info__item-value title title_normal">
+                  <span>4</span>&nbsp;Guests
+                </div>
+                <div class="default-slide-info__item-calc">
+                  <img src="img/icons/minus.svg" alt="Minus Icon" onclick="changeNumber(event, 'minus')">
+                  <img src="img/icons/plus.svg" alt="Plus Icon" onclick="changeNumber(event, 'plus')">
+                </div>
+              </div>
+            </li>
+            <li class="default-slide-info__item">
+              <div class="default-slide-info__item-description">Pricing</div>
+              <div class="default-slide-info__item-wrapper">
+                <div class="default-slide-info__item-value title title_normal">$349 USD</div>
+                <div class="default-slide-info__item-round">Per Night</div>
+              </div>
+            </li> 
+          </ul>
+
+          <div class="slider-item__book-stay to-action">
+            <div class="to-action__first-half">
+              Book
+            </div>
+            <a href="#">
+              <div class="to-action__second-half">
+                Stay
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="sleep-slider__item slider-item">
+          <div class="slider-item__location current-location">
+            <div class="current-location__suptitle suptitle line line_left">Resorts</div>
+            <div class="current-location__title location">
+              <span class="location__town">Auberge</span>
+              <span class="location__divider">&nbsp;|&nbsp;</span>
+              <span class="location__country">Australia</span>
+            </div>
+          </div>
+          <div class="slider-item__bg-image">
+            <img src="img/sleep/sleep-slide-bg-1.png" alt="Sleep Slide Backgorund Image">
+          </div>
+          <div class="slider-item__hammock-image">
+            <img src="img/sleep/sleep-slide-hammock-1.png" alt="Sleep Slide hammock Image">
+          </div>
+          <div class="slider-item__rating">
+            <div class="slider-item__rating-suptitle suptitle line line_right">Rating</div>
+            <div class="slider-item__rating-title title title_normal">
+              Excellent
+              <div class="slider-item__rating-stars">
+                <img class="slider-item__rating-star" src="img/icons/star.svg" alt="Star Icon">
+                <img class="slider-item__rating-star" src="img/icons/star.svg" alt="Star Icon">
+                <img class="slider-item__rating-star" src="img/icons/star.svg" alt="Star Icon">
+                <img class="slider-item__rating-star" src="img/icons/star.svg" alt="Star Icon">
+              </div>
+            </div>
+          </div>
+
+          <ul class="slider-item__sleep-info sleep-info default-slide-info">
+            <li class="default-slide-info__item">
+              <div class="default-slide-info__item-description">Resort</div>
+              <div class="default-slide-info__item-wrapper">
+                <div class="default-slide-info__item-value title title_normal">Auberge Australia</div>
+              </div>
+            </li>
+            <li class="default-slide-info__item">
+              <div class="default-slide-info__item-description"># of Nights</div>
+              <div class="default-slide-info__item-wrapper">
+                <div class="default-slide-info__item-value title title_normal">
+                  <span>5</span>&nbsp;Nights
+                </div>
+                <div class="default-slide-info__item-calc">
+                  <img src="img/icons/minus.svg" alt="Minus Icon" onclick="changeNumber(event, 'minus')">
+                  <img src="img/icons/plus.svg" alt="Plus Icon" onclick="changeNumber(event, 'plus')">
+                </div>
+              </div>
+            </li>
+            <li class="default-slide-info__item">
+              <div class="default-slide-info__item-description"># of Guests</div>
+              <div class="default-slide-info__item-wrapper">
+                <div class="default-slide-info__item-value title title_normal">
+                  <span>4</span>&nbsp;Guests
+                </div>
+                <div class="default-slide-info__item-calc">
+                  <img src="img/icons/minus.svg" alt="Minus Icon" onclick="changeNumber(event, 'minus')">
+                  <img src="img/icons/plus.svg" alt="Plus Icon" onclick="changeNumber(event, 'plus')">
+                </div>
+              </div>
+            </li>
+            <li class="default-slide-info__item">
+              <div class="default-slide-info__item-description">Pricing</div>
+              <div class="default-slide-info__item-wrapper">
+                <div class="default-slide-info__item-value title title_normal">$349 USD</div>
+                <div class="default-slide-info__item-round">Per Night</div>
+              </div>
+            </li> 
+          </ul>
+
+          <div class="slider-item__book-stay to-action">
+            <div class="to-action__first-half">
+              Book
+            </div>
+            <a href="#">
+              <div class="to-action__second-half">
+                Stay
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="sleep-slider__item slider-item">
+          <div class="slider-item__location current-location">
+            <div class="current-location__suptitle suptitle line line_left">Resorts</div>
+            <div class="current-location__title location">
+              <span class="location__town">Auberge</span>
+              <span class="location__divider">&nbsp;|&nbsp;</span>
+              <span class="location__country">Australia</span>
+            </div>
+          </div>
+          <div class="slider-item__bg-image">
+            <img src="img/sleep/sleep-slide-bg-1.png" alt="Sleep Slide Backgorund Image">
+          </div>
+          <div class="slider-item__hammock-image">
+            <img src="img/sleep/sleep-slide-hammock-1.png" alt="Sleep Slide hammock Image">
+          </div>
+          <div class="slider-item__rating">
+            <div class="slider-item__rating-suptitle suptitle line line_right">Rating</div>
+            <div class="slider-item__rating-title title title_normal">
+              Excellent
+              <div class="slider-item__rating-stars">
+                <img class="slider-item__rating-star" src="img/icons/star.svg" alt="Star Icon">
+                <img class="slider-item__rating-star" src="img/icons/star.svg" alt="Star Icon">
+                <img class="slider-item__rating-star" src="img/icons/star.svg" alt="Star Icon">
+                <img class="slider-item__rating-star" src="img/icons/star.svg" alt="Star Icon">
+              </div>
+            </div>
+          </div>
+
+          <ul class="slider-item__sleep-info sleep-info default-slide-info">
+            <li class="default-slide-info__item">
+              <div class="default-slide-info__item-description">Resort</div>
+              <div class="default-slide-info__item-wrapper">
+                <div class="default-slide-info__item-value title title_normal">Auberge Australia</div>
+              </div>
+            </li>
+            <li class="default-slide-info__item">
+              <div class="default-slide-info__item-description"># of Nights</div>
+              <div class="default-slide-info__item-wrapper">
+                <div class="default-slide-info__item-value title title_normal">
+                  <span>5</span>&nbsp;Nights
+                </div>
+                <div class="default-slide-info__item-calc">
+                  <img src="img/icons/minus.svg" alt="Minus Icon" onclick="changeNumber(event, 'minus')">
+                  <img src="img/icons/plus.svg" alt="Plus Icon" onclick="changeNumber(event, 'plus')">
+                </div>
+              </div>
+            </li>
+            <li class="default-slide-info__item">
+              <div class="default-slide-info__item-description"># of Guests</div>
+              <div class="default-slide-info__item-wrapper">
+                <div class="default-slide-info__item-value title title_normal">
+                  <span>4</span>&nbsp;Guests
+                </div>
+                <div class="default-slide-info__item-calc">
+                  <img src="img/icons/minus.svg" alt="Minus Icon" onclick="changeNumber(event, 'minus')">
+                  <img src="img/icons/plus.svg" alt="Plus Icon" onclick="changeNumber(event, 'plus')">
+                </div>
+              </div>
+            </li>
+            <li class="default-slide-info__item">
+              <div class="default-slide-info__item-description">Pricing</div>
+              <div class="default-slide-info__item-wrapper">
+                <div class="default-slide-info__item-value title title_normal">$349 USD</div>
+                <div class="default-slide-info__item-round">Per Night</div>
+              </div>
+            </li> 
+          </ul>
+
+          <div class="slider-item__book-stay to-action">
+            <div class="to-action__first-half">
+              Book
+            </div>
+            <a href="#">
+              <div class="to-action__second-half">
+                Stay
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="sleep-slider__arrows slider-arrows">
+        <button class="sleep-prev-arrow">
+          <img src="img/icons/arrow-left.svg" alt="Previous Slide">
+        </button>
+        <button class="sleep-next-arrow">
+          <img src="img/icons/arrow-right.svg" alt="Next Slide">
+        </button>
+      </div>
     </div>
+  <!-- /Slider -->
+
+  <!-- Flower Background Image -->
+  <div class="sleep__flower">
+    <img src="img/sleep/flower.png" alt="Flower Background Image">
   </div>
+  <!-- /Flower Background Image -->
 </section>
