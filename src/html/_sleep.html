@@ -51,11 +51,15 @@
               <div class="default-slide-info__item-description"># of Nights</div>
               <div class="default-slide-info__item-wrapper">
                 <div class="default-slide-info__item-value title title_normal">
-                  <span>5</span>&nbsp;Nights
+                  <span class="default-slide-info__item-value-number" id="nights-value-1" data-price="17.5">1</span>Nights
                 </div>
                 <div class="default-slide-info__item-calc">
-                  <img src="img/icons/minus.svg" alt="Minus Icon" onclick="changeNumber(event, 'minus')">
-                  <img src="img/icons/plus.svg" alt="Plus Icon" onclick="changeNumber(event, 'plus')">
+                  <button onclick="changeNumber(event, 'minus', 1, 'nights')">
+                    <img src="img/icons/minus.svg" alt="Minus Icon">
+                  </button>
+                  <button onclick="changeNumber(event, 'plus', 1, 'nights')">
+                    <img src="img/icons/plus.svg" alt="Plus Icon">
+                  </button>
                 </div>
               </div>
             </li>
@@ -63,19 +67,24 @@
               <div class="default-slide-info__item-description"># of Guests</div>
               <div class="default-slide-info__item-wrapper">
                 <div class="default-slide-info__item-value title title_normal">
-                  <span>4</span>&nbsp;Guests
+                  <span class="default-slide-info__item-value-number" id="guests-value-1">1</span>Guests
                 </div>
                 <div class="default-slide-info__item-calc">
-                  <img src="img/icons/minus.svg" alt="Minus Icon" onclick="changeNumber(event, 'minus')">
-                  <img src="img/icons/plus.svg" alt="Plus Icon" onclick="changeNumber(event, 'plus')">
+                  <button onclick="changeNumber(event, 'minus', 1, 'guests')">
+                    <img src="img/icons/minus.svg" alt="Minus Icon">
+                  </button>
+                  <button onclick="changeNumber(event, 'plus', 1, 'guests')">
+                    <img src="img/icons/plus.svg" alt="Plus Icon">
+                  </button>
                 </div>
               </div>
             </li>
             <li class="default-slide-info__item">
               <div class="default-slide-info__item-description">Pricing</div>
               <div class="default-slide-info__item-wrapper">
-                <div class="default-slide-info__item-value title title_normal">$349 USD</div>
-                <div class="default-slide-info__item-round">Per Night</div>
+                <div class="default-slide-info__item-value title title_normal">
+                  $<span id="total-value-1">0</span>&nbsp;USD</div>
+                <div class="default-slide-info__item-total">Per Night</div>
               </div>
             </li> 
           </ul>
@@ -97,7 +106,7 @@
             <div class="current-location__title location">
               <span class="location__town">Auberge</span>
               <span class="location__divider">&nbsp;|&nbsp;</span>
-              <span class="location__country">Australia</span>
+              <span class="location__country">Australia II</span>
             </div>
           </div>
           <div class="slider-item__bg-image">
@@ -123,18 +132,22 @@
             <li class="default-slide-info__item">
               <div class="default-slide-info__item-description">Resort</div>
               <div class="default-slide-info__item-wrapper">
-                <div class="default-slide-info__item-value title title_normal">Auberge Australia</div>
+                <div class="default-slide-info__item-value title title_normal">Auberge Australia II</div>
               </div>
             </li>
             <li class="default-slide-info__item">
               <div class="default-slide-info__item-description"># of Nights</div>
               <div class="default-slide-info__item-wrapper">
                 <div class="default-slide-info__item-value title title_normal">
-                  <span>5</span>&nbsp;Nights
+                  <span class="default-slide-info__item-value-number" id="nights-value-2" data-price="18">1</span>Nights
                 </div>
                 <div class="default-slide-info__item-calc">
-                  <img src="img/icons/minus.svg" alt="Minus Icon" onclick="changeNumber(event, 'minus')">
-                  <img src="img/icons/plus.svg" alt="Plus Icon" onclick="changeNumber(event, 'plus')">
+                  <button onclick="changeNumber(event, 'minus', 2, 'nights')">
+                    <img src="img/icons/minus.svg" alt="Minus Icon">
+                  </button>
+                  <button onclick="changeNumber(event, 'plus', 2, 'nights')">
+                    <img src="img/icons/plus.svg" alt="Plus Icon">
+                  </button>
                 </div>
               </div>
             </li>
@@ -142,19 +155,24 @@
               <div class="default-slide-info__item-description"># of Guests</div>
               <div class="default-slide-info__item-wrapper">
                 <div class="default-slide-info__item-value title title_normal">
-                  <span>4</span>&nbsp;Guests
+                  <span class="default-slide-info__item-value-number" id="guests-value-2">1</span>Guests
                 </div>
                 <div class="default-slide-info__item-calc">
-                  <img src="img/icons/minus.svg" alt="Minus Icon" onclick="changeNumber(event, 'minus')">
-                  <img src="img/icons/plus.svg" alt="Plus Icon" onclick="changeNumber(event, 'plus')">
+                  <button onclick="changeNumber(event, 'minus', 2, 'guests')">
+                    <img src="img/icons/minus.svg" alt="Minus Icon">
+                  </button>
+                  <button onclick="changeNumber(event, 'plus', 2, 'guests')">
+                    <img src="img/icons/plus.svg" alt="Plus Icon">
+                  </button>
                 </div>
               </div>
             </li>
             <li class="default-slide-info__item">
               <div class="default-slide-info__item-description">Pricing</div>
               <div class="default-slide-info__item-wrapper">
-                <div class="default-slide-info__item-value title title_normal">$349 USD</div>
-                <div class="default-slide-info__item-round">Per Night</div>
+                <div class="default-slide-info__item-value title title_normal">
+                  $<span id="total-value-2">0</span>&nbsp;USD</div>
+                <div class="default-slide-info__item-total">Per Night</div>
               </div>
             </li> 
           </ul>
@@ -176,7 +194,7 @@
             <div class="current-location__title location">
               <span class="location__town">Auberge</span>
               <span class="location__divider">&nbsp;|&nbsp;</span>
-              <span class="location__country">Australia</span>
+              <span class="location__country">Australia III</span>
             </div>
           </div>
           <div class="slider-item__bg-image">
@@ -202,18 +220,22 @@
             <li class="default-slide-info__item">
               <div class="default-slide-info__item-description">Resort</div>
               <div class="default-slide-info__item-wrapper">
-                <div class="default-slide-info__item-value title title_normal">Auberge Australia</div>
+                <div class="default-slide-info__item-value title title_normal">Auberge Australia III</div>
               </div>
             </li>
             <li class="default-slide-info__item">
               <div class="default-slide-info__item-description"># of Nights</div>
               <div class="default-slide-info__item-wrapper">
                 <div class="default-slide-info__item-value title title_normal">
-                  <span>5</span>&nbsp;Nights
+                  <span class="default-slide-info__item-value-number" id="nights-value-3" data-price="18.5">1</span>Nights
                 </div>
                 <div class="default-slide-info__item-calc">
-                  <img src="img/icons/minus.svg" alt="Minus Icon" onclick="changeNumber(event, 'minus')">
-                  <img src="img/icons/plus.svg" alt="Plus Icon" onclick="changeNumber(event, 'plus')">
+                  <button onclick="changeNumber(event, 'minus', 3, 'nights')">
+                    <img src="img/icons/minus.svg" alt="Minus Icon">
+                  </button>
+                  <button onclick="changeNumber(event, 'plus', 3, 'nights')">
+                    <img src="img/icons/plus.svg" alt="Plus Icon">
+                  </button>
                 </div>
               </div>
             </li>
@@ -221,19 +243,24 @@
               <div class="default-slide-info__item-description"># of Guests</div>
               <div class="default-slide-info__item-wrapper">
                 <div class="default-slide-info__item-value title title_normal">
-                  <span>4</span>&nbsp;Guests
+                  <span class="default-slide-info__item-value-number" id="guests-value-3">1</span>Guests
                 </div>
                 <div class="default-slide-info__item-calc">
-                  <img src="img/icons/minus.svg" alt="Minus Icon" onclick="changeNumber(event, 'minus')">
-                  <img src="img/icons/plus.svg" alt="Plus Icon" onclick="changeNumber(event, 'plus')">
+                  <button onclick="changeNumber(event, 'minus', 3, 'guests')">
+                    <img src="img/icons/minus.svg" alt="Minus Icon">
+                  </button>
+                  <button onclick="changeNumber(event, 'plus', 3, 'guests')">
+                    <img src="img/icons/plus.svg" alt="Plus Icon">
+                  </button>
                 </div>
               </div>
             </li>
             <li class="default-slide-info__item">
               <div class="default-slide-info__item-description">Pricing</div>
               <div class="default-slide-info__item-wrapper">
-                <div class="default-slide-info__item-value title title_normal">$349 USD</div>
-                <div class="default-slide-info__item-round">Per Night</div>
+                <div class="default-slide-info__item-value title title_normal">
+                  $<span id="total-value-3">0</span>&nbsp;USD</div>
+                <div class="default-slide-info__item-total">Per Night</div>
               </div>
             </li> 
           </ul>
@@ -255,7 +282,7 @@
             <div class="current-location__title location">
               <span class="location__town">Auberge</span>
               <span class="location__divider">&nbsp;|&nbsp;</span>
-              <span class="location__country">Australia</span>
+              <span class="location__country">Australia IV</span>
             </div>
           </div>
           <div class="slider-item__bg-image">
@@ -281,18 +308,22 @@
             <li class="default-slide-info__item">
               <div class="default-slide-info__item-description">Resort</div>
               <div class="default-slide-info__item-wrapper">
-                <div class="default-slide-info__item-value title title_normal">Auberge Australia</div>
+                <div class="default-slide-info__item-value title title_normal">Auberge Australia IV</div>
               </div>
             </li>
             <li class="default-slide-info__item">
               <div class="default-slide-info__item-description"># of Nights</div>
               <div class="default-slide-info__item-wrapper">
                 <div class="default-slide-info__item-value title title_normal">
-                  <span>5</span>&nbsp;Nights
+                  <span class="default-slide-info__item-value-number" id="nights-value-4" data-price="19">1</span>Nights
                 </div>
                 <div class="default-slide-info__item-calc">
-                  <img src="img/icons/minus.svg" alt="Minus Icon" onclick="changeNumber(event, 'minus')">
-                  <img src="img/icons/plus.svg" alt="Plus Icon" onclick="changeNumber(event, 'plus')">
+                  <button onclick="changeNumber(event, 'minus', 4, 'nigths')">
+                    <img src="img/icons/minus.svg" alt="Minus Icon">
+                  </button>
+                  <button onclick="changeNumber(event, 'plus', 4, 'nigths')">
+                    <img src="img/icons/plus.svg" alt="Plus Icon">
+                  </button>
                 </div>
               </div>
             </li>
@@ -300,19 +331,24 @@
               <div class="default-slide-info__item-description"># of Guests</div>
               <div class="default-slide-info__item-wrapper">
                 <div class="default-slide-info__item-value title title_normal">
-                  <span>4</span>&nbsp;Guests
+                  <span class="default-slide-info__item-value-number" id="guests-value-4">1</span>Guests
                 </div>
                 <div class="default-slide-info__item-calc">
-                  <img src="img/icons/minus.svg" alt="Minus Icon" onclick="changeNumber(event, 'minus')">
-                  <img src="img/icons/plus.svg" alt="Plus Icon" onclick="changeNumber(event, 'plus')">
+                  <button onclick="changeNumber(event, 'minus', 4, 'guests')">
+                    <img src="img/icons/minus.svg" alt="Minus Icon">
+                  </button>
+                  <button onclick="changeNumber(event, 'plus', 4, 'guests')">
+                    <img src="img/icons/plus.svg" alt="Plus Icon">
+                  </button>
                 </div>
               </div>
             </li>
             <li class="default-slide-info__item">
               <div class="default-slide-info__item-description">Pricing</div>
               <div class="default-slide-info__item-wrapper">
-                <div class="default-slide-info__item-value title title_normal">$349 USD</div>
-                <div class="default-slide-info__item-round">Per Night</div>
+                <div class="default-slide-info__item-value title title_normal">
+                  $<span id="total-value-4">0</span>&nbsp;USD</div>
+                <div class="default-slide-info__item-total">Per Night</div>
               </div>
             </li> 
           </ul>
@@ -334,7 +370,7 @@
             <div class="current-location__title location">
               <span class="location__town">Auberge</span>
               <span class="location__divider">&nbsp;|&nbsp;</span>
-              <span class="location__country">Australia</span>
+              <span class="location__country">Australia V</span>
             </div>
           </div>
           <div class="slider-item__bg-image">
@@ -360,18 +396,22 @@
             <li class="default-slide-info__item">
               <div class="default-slide-info__item-description">Resort</div>
               <div class="default-slide-info__item-wrapper">
-                <div class="default-slide-info__item-value title title_normal">Auberge Australia</div>
+                <div class="default-slide-info__item-value title title_normal">Auberge Australia V</div>
               </div>
             </li>
             <li class="default-slide-info__item">
               <div class="default-slide-info__item-description"># of Nights</div>
               <div class="default-slide-info__item-wrapper">
                 <div class="default-slide-info__item-value title title_normal">
-                  <span>5</span>&nbsp;Nights
+                  <span class="default-slide-info__item-value-number" id="nights-value-5" data-price="19.5">1</span>Nights
                 </div>
                 <div class="default-slide-info__item-calc">
-                  <img src="img/icons/minus.svg" alt="Minus Icon" onclick="changeNumber(event, 'minus')">
-                  <img src="img/icons/plus.svg" alt="Plus Icon" onclick="changeNumber(event, 'plus')">
+                  <button onclick="changeNumber(event, 'minus', 5, 'nights')">
+                    <img src="img/icons/minus.svg" alt="Minus Icon">
+                  </button>
+                  <button onclick="changeNumber(event, 'plus', 5, 'nights')">
+                    <img src="img/icons/plus.svg" alt="Plus Icon">
+                  </button>
                 </div>
               </div>
             </li>
@@ -379,19 +419,24 @@
               <div class="default-slide-info__item-description"># of Guests</div>
               <div class="default-slide-info__item-wrapper">
                 <div class="default-slide-info__item-value title title_normal">
-                  <span>4</span>&nbsp;Guests
+                  <span class="default-slide-info__item-value-number" id="guests-value-5">1</span>Guests
                 </div>
                 <div class="default-slide-info__item-calc">
-                  <img src="img/icons/minus.svg" alt="Minus Icon" onclick="changeNumber(event, 'minus')">
-                  <img src="img/icons/plus.svg" alt="Plus Icon" onclick="changeNumber(event, 'plus')">
+                  <button onclick="changeNumber(event, 'minus', 5, 'guests')">
+                    <img src="img/icons/minus.svg" alt="Minus Icon">
+                  </button>
+                  <button onclick="changeNumber(event, 'plus', 5, 'guests')">
+                    <img src="img/icons/plus.svg" alt="Plus Icon">
+                  </button>
                 </div>
               </div>
             </li>
             <li class="default-slide-info__item">
               <div class="default-slide-info__item-description">Pricing</div>
               <div class="default-slide-info__item-wrapper">
-                <div class="default-slide-info__item-value title title_normal">$349 USD</div>
-                <div class="default-slide-info__item-round">Per Night</div>
+                <div class="default-slide-info__item-value title title_normal">
+                  $<span id="total-value-5">0</span>&nbsp;USD</div>
+                <div class="default-slide-info__item-total">Per Night</div>
               </div>
             </li> 
           </ul>
@@ -413,7 +458,7 @@
             <div class="current-location__title location">
               <span class="location__town">Auberge</span>
               <span class="location__divider">&nbsp;|&nbsp;</span>
-              <span class="location__country">Australia</span>
+              <span class="location__country">Australia VI</span>
             </div>
           </div>
           <div class="slider-item__bg-image">
@@ -439,18 +484,22 @@
             <li class="default-slide-info__item">
               <div class="default-slide-info__item-description">Resort</div>
               <div class="default-slide-info__item-wrapper">
-                <div class="default-slide-info__item-value title title_normal">Auberge Australia</div>
+                <div class="default-slide-info__item-value title title_normal">Auberge Australia VI</div>
               </div>
             </li>
             <li class="default-slide-info__item">
               <div class="default-slide-info__item-description"># of Nights</div>
               <div class="default-slide-info__item-wrapper">
                 <div class="default-slide-info__item-value title title_normal">
-                  <span>5</span>&nbsp;Nights
+                  <span class="default-slide-info__item-value-number" id="nights-value-6" data-price="20">1</span>Nights
                 </div>
                 <div class="default-slide-info__item-calc">
-                  <img src="img/icons/minus.svg" alt="Minus Icon" onclick="changeNumber(event, 'minus')">
-                  <img src="img/icons/plus.svg" alt="Plus Icon" onclick="changeNumber(event, 'plus')">
+                  <button onclick="changeNumber(event, 'minus', 6, 'nights')">
+                    <img src="img/icons/minus.svg" alt="Minus Icon">
+                  </button>
+                  <button onclick="changeNumber(event, 'plus', 6, 'nights')">
+                    <img src="img/icons/plus.svg" alt="Plus Icon">
+                  </button>
                 </div>
               </div>
             </li>
@@ -458,19 +507,24 @@
               <div class="default-slide-info__item-description"># of Guests</div>
               <div class="default-slide-info__item-wrapper">
                 <div class="default-slide-info__item-value title title_normal">
-                  <span>4</span>&nbsp;Guests
+                  <span class="default-slide-info__item-value-number" id="guests-value-6">1</span>Guests
                 </div>
                 <div class="default-slide-info__item-calc">
-                  <img src="img/icons/minus.svg" alt="Minus Icon" onclick="changeNumber(event, 'minus')">
-                  <img src="img/icons/plus.svg" alt="Plus Icon" onclick="changeNumber(event, 'plus')">
+                  <button onclick="changeNumber(event, 'minus', 6, 'guests')">
+                    <img src="img/icons/minus.svg" alt="Minus Icon">
+                  </button>
+                  <button onclick="changeNumber(event, 'plus', 6, 'guests')">
+                    <img src="img/icons/plus.svg" alt="Plus Icon">
+                  </button>
                 </div>
               </div>
             </li>
             <li class="default-slide-info__item">
               <div class="default-slide-info__item-description">Pricing</div>
               <div class="default-slide-info__item-wrapper">
-                <div class="default-slide-info__item-value title title_normal">$349 USD</div>
-                <div class="default-slide-info__item-round">Per Night</div>
+                <div class="default-slide-info__item-value title title_normal">
+                  $<span id="total-value-6">0</span>&nbsp;USD</div>
+                <div class="default-slide-info__item-total">Per Night</div>
               </div>
             </li> 
           </ul>
@@ -492,7 +546,7 @@
             <div class="current-location__title location">
               <span class="location__town">Auberge</span>
               <span class="location__divider">&nbsp;|&nbsp;</span>
-              <span class="location__country">Australia</span>
+              <span class="location__country">Australia VII</span>
             </div>
           </div>
           <div class="slider-item__bg-image">
@@ -518,18 +572,22 @@
             <li class="default-slide-info__item">
               <div class="default-slide-info__item-description">Resort</div>
               <div class="default-slide-info__item-wrapper">
-                <div class="default-slide-info__item-value title title_normal">Auberge Australia</div>
+                <div class="default-slide-info__item-value title title_normal">Auberge Australia VII</div>
               </div>
             </li>
             <li class="default-slide-info__item">
               <div class="default-slide-info__item-description"># of Nights</div>
               <div class="default-slide-info__item-wrapper">
                 <div class="default-slide-info__item-value title title_normal">
-                  <span>5</span>&nbsp;Nights
+                  <span class="default-slide-info__item-value-number" id="nights-value-7" data-price="20.5">1</span>Nights
                 </div>
                 <div class="default-slide-info__item-calc">
-                  <img src="img/icons/minus.svg" alt="Minus Icon" onclick="changeNumber(event, 'minus')">
-                  <img src="img/icons/plus.svg" alt="Plus Icon" onclick="changeNumber(event, 'plus')">
+                  <button onclick="changeNumber(event, 'minus', 7, 'nights')">
+                    <img src="img/icons/minus.svg" alt="Minus Icon">
+                  </button>
+                  <button onclick="changeNumber(event, 'plus', 7, 'nights')">
+                    <img src="img/icons/plus.svg" alt="Plus Icon">
+                  </button>
                 </div>
               </div>
             </li>
@@ -537,19 +595,24 @@
               <div class="default-slide-info__item-description"># of Guests</div>
               <div class="default-slide-info__item-wrapper">
                 <div class="default-slide-info__item-value title title_normal">
-                  <span>4</span>&nbsp;Guests
+                  <span class="default-slide-info__item-value-number" id="guests-value-7">1</span>Guests
                 </div>
                 <div class="default-slide-info__item-calc">
-                  <img src="img/icons/minus.svg" alt="Minus Icon" onclick="changeNumber(event, 'minus')">
-                  <img src="img/icons/plus.svg" alt="Plus Icon" onclick="changeNumber(event, 'plus')">
+                  <button onclick="changeNumber(event, 'minus', 7, 'guests')">
+                    <img src="img/icons/minus.svg" alt="Minus Icon">
+                  </button>
+                  <button onclick="changeNumber(event, 'plus', 7, 'guests')">
+                    <img src="img/icons/plus.svg" alt="Plus Icon">
+                  </button>
                 </div>
               </div>
             </li>
             <li class="default-slide-info__item">
               <div class="default-slide-info__item-description">Pricing</div>
               <div class="default-slide-info__item-wrapper">
-                <div class="default-slide-info__item-value title title_normal">$349 USD</div>
-                <div class="default-slide-info__item-round">Per Night</div>
+                <div class="default-slide-info__item-value title title_normal">
+                  $<span id="total-value-7">0</span>&nbsp;USD</div>
+                <div class="default-slide-info__item-total">Per Night</div>
               </div>
             </li> 
           </ul>
@@ -571,7 +634,7 @@
             <div class="current-location__title location">
               <span class="location__town">Auberge</span>
               <span class="location__divider">&nbsp;|&nbsp;</span>
-              <span class="location__country">Australia</span>
+              <span class="location__country">Australia VIII</span>
             </div>
           </div>
           <div class="slider-item__bg-image">
@@ -597,18 +660,22 @@
             <li class="default-slide-info__item">
               <div class="default-slide-info__item-description">Resort</div>
               <div class="default-slide-info__item-wrapper">
-                <div class="default-slide-info__item-value title title_normal">Auberge Australia</div>
+                <div class="default-slide-info__item-value title title_normal">Auberge Australia VIII</div>
               </div>
             </li>
             <li class="default-slide-info__item">
               <div class="default-slide-info__item-description"># of Nights</div>
               <div class="default-slide-info__item-wrapper">
                 <div class="default-slide-info__item-value title title_normal">
-                  <span>5</span>&nbsp;Nights
+                  <span class="default-slide-info__item-value-number" id="nights-value-8" data-price="21">1</span>Nights
                 </div>
                 <div class="default-slide-info__item-calc">
-                  <img src="img/icons/minus.svg" alt="Minus Icon" onclick="changeNumber(event, 'minus')">
-                  <img src="img/icons/plus.svg" alt="Plus Icon" onclick="changeNumber(event, 'plus')">
+                  <button onclick="changeNumber(event, 'minus', 8, 'nights')">
+                    <img src="img/icons/minus.svg" alt="Minus Icon">
+                  </button>
+                  <button onclick="changeNumber(event, 'plus', 8, 'nights')">
+                    <img src="img/icons/plus.svg" alt="Plus Icon">
+                  </button>
                 </div>
               </div>
             </li>
@@ -616,19 +683,24 @@
               <div class="default-slide-info__item-description"># of Guests</div>
               <div class="default-slide-info__item-wrapper">
                 <div class="default-slide-info__item-value title title_normal">
-                  <span>4</span>&nbsp;Guests
+                  <span class="default-slide-info__item-value-number" id="guests-value-8">1</span>Guests
                 </div>
                 <div class="default-slide-info__item-calc">
-                  <img src="img/icons/minus.svg" alt="Minus Icon" onclick="changeNumber(event, 'minus')">
-                  <img src="img/icons/plus.svg" alt="Plus Icon" onclick="changeNumber(event, 'plus')">
+                  <button onclick="changeNumber(event, 'minus', 8, 'guests')">
+                    <img src="img/icons/minus.svg" alt="Minus Icon">
+                  </button>
+                  <button onclick="changeNumber(event, 'plus', 8, 'guests')">
+                    <img src="img/icons/plus.svg" alt="Plus Icon">
+                  </button>
                 </div>
               </div>
             </li>
             <li class="default-slide-info__item">
               <div class="default-slide-info__item-description">Pricing</div>
               <div class="default-slide-info__item-wrapper">
-                <div class="default-slide-info__item-value title title_normal">$349 USD</div>
-                <div class="default-slide-info__item-round">Per Night</div>
+                <div class="default-slide-info__item-value title title_normal">
+                  $<span id="total-value-8">0</span>&nbsp;USD</div>
+                <div class="default-slide-info__item-total">Per Night</div>
               </div>
             </li> 
           </ul>

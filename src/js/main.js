@@ -92,11 +92,31 @@ $('.sleep-slick-slider').slick({
 });
 
 // Change number of nights/guests
-const changeNumber = (event, action) => {
-  const value = +event.target.parentNode.parentNode.children[0].children[0].innerText;
+const changeNumber = (event, action, idNumber, valueType) => {
+  const element = $(`#${valueType}-value-${idNumber}`)[0];
+  const value = +element.innerText
   if (action === 'plus') {
-    event.target.parentNode.parentNode.children[0].children[0].innerText = `${value + 1}`
-  } else if (+value !== 0) {
-    event.target.parentNode.parentNode.children[0].children[0].innerText = `${value - 1}`
+    element.innerText = `${value + 1}`
+  } else if (value > 1) {
+    element.innerText = `${value - 1}`
   }
+  calculateTotalPrice(idNumber);
 }
+
+// Calculate total price
+const calculateTotalPrice = idNumber => {
+  const totalElement = $(`#total-value-${idNumber}`)[0];
+  const price = +$(`#nights-value-${idNumber}`)[0].dataset.price;
+  const nightsNumber = +$(`#nights-value-${idNumber}`)[0].innerText;
+  const guestsNumber = +$(`#guests-value-${idNumber}`)[0].innerText;
+
+  totalElement.innerText = guestsNumber * price * nightsNumber;
+}
+
+// Initial calculating of total prices
+(() => {
+  const totalPrices = $('[data-price]');
+  for (let i = 1; i <= totalPrices.length; i++) {
+    calculateTotalPrice(i);
+  }
+})();

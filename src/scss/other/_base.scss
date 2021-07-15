@@ -283,7 +283,11 @@ body {
   &__item-value {
     margin-left: 18px;
   }
-  &__item-round {
+  &__item-value-number {
+    display: inline-block;
+    width: 50px;
+  }
+  &__item-round, &__item-total {
     display: flex;
     justify-content: flex-end;
     font-size: 14px;
@@ -291,16 +295,23 @@ body {
     letter-spacing: 5.25px;
     color: rgba($white, .75);
     text-transform: uppercase;
+  }
+  &__item-round {
     cursor: pointer;
   }
   &__item-calc {
     display: flex;
     justify-content: flex-end;
     margin-top: 11px;
-    img {
+    button {
+      background: none;
+      border: none;
       cursor: pointer;
+      img {
+        pointer-events: none;
+      }
     }
-    img + img {
+    button + button {
       margin-left: 16px;
     }
   }
