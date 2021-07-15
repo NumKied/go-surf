@@ -76,9 +76,9 @@ $('.travel-slick-slider').slick({
 // Round price
 const round = event => {
   const value = event.target.parentNode.children[0].children[0].innerText;
-  if (parseInt(value[value.length - 1]) !== 0) {
+  if (+value[value.length - 1] !== 0) {
     const firstHalf = value.slice(0, value.length - 2)
-    const secondHalf = parseInt(value.slice(value.length - 2, value.length - 1));
+    const secondHalf = +value.slice(value.length - 2, value.length - 1);
     event.target.parentNode.children[0].children[0].innerText = `${firstHalf}${secondHalf + 1}0`;
   }
 }
@@ -93,10 +93,10 @@ $('.sleep-slick-slider').slick({
 
 // Change number of nights/guests
 const changeNumber = (event, action) => {
-  const value = parseInt(event.target.parentNode.parentNode.children[0].children[0].innerText);
+  const value = +event.target.parentNode.parentNode.children[0].children[0].innerText;
   if (action === 'plus') {
     event.target.parentNode.parentNode.children[0].children[0].innerText = `${value + 1}`
-  } else if (parseInt(value) !== 0) {
+  } else if (+value !== 0) {
     event.target.parentNode.parentNode.children[0].children[0].innerText = `${value - 1}`
   }
 }

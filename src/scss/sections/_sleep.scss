@@ -1,29 +1,8 @@
 .sleep {
-  padding: 157px 0 141px;
+  padding-bottom: 141px;
   &__flower {
     position: absolute;
     bottom: 116px;
     right: -160px;
-  }
-}
-
-.default-slider {
-  .slider-item {
-    &__hammock-image {
-      position: absolute;
-      top: 410px;
-      right: -72px;
-      img {
-        width: 565px;
-        height: 385px;
-      }
-    }
-    &__rating-star {
-      width: 22px;
-      height: 22px;
-    }
-  }
-  .slider-item__rating-star + .slider-item__rating-star {
-    margin-left: 11px;
   }
 }

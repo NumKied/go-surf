@@ -1,24 +1,9 @@
 .travel {
-  padding: 157px 0 154px;
+  padding-bottom: 154px;
   &__cocktail {
     position: absolute;
     bottom: -90px;
     right: -242px;
     z-index: -1;
-  }
-}
-
-.default-slider {
-  .slider-item {
-    &__airplane-image {
-      position: absolute;
-      top: 458px;
-      right: -62px;
-      transform: rotate(10deg);
-      img {
-        width: 750px;
-        height: 250px;
-      }
-    }
   }
 }

@@ -156,6 +156,7 @@ body {
   position: relative;
   width: 100%;
   min-height: 100vh;
+  padding-top: 157px;
   &__bg-title {
     position: absolute;
     top: 192px;
@@ -193,6 +194,25 @@ body {
         height: 780px;
       }
     }
+    &__hammock-image {
+      position: absolute;
+      top: 410px;
+      right: -72px;
+      img {
+        width: 565px;
+        height: 385px;
+      }
+    }
+    &__airplane-image {
+      position: absolute;
+      top: 458px;
+      right: -62px;
+      transform: rotate(10deg);
+      img {
+        width: 750px;
+        height: 250px;
+      }
+    }
     &__airline, &__rating {
       margin-bottom: 120px;
       margin-left: 135px;
@@ -208,6 +228,10 @@ body {
       display: flex;
       margin-left: 26px;
     }
+    &__rating-star {
+      width: 22px;
+      height: 22px;
+    }
     &__travel-info, &__sleep-info {
       margin-bottom: 66px;
       margin-left: 157px;
@@ -217,6 +241,9 @@ body {
       justify-content: center;
       height: 80px;
     }
+  }
+  .slider-item__rating-star + .slider-item__rating-star {
+    margin-left: 11px;
   }
   .slick-list {
     overflow: visible;
