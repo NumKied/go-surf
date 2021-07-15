@@ -38,6 +38,9 @@ body {
       background-color: $white;
       transform: translate(-50%, -50%);
     }
+    img {
+      margin-left: 15px;
+    }
   }
 }
 
@@ -256,7 +259,6 @@ body {
 .default-slide-info {
   display: flex;
   height: 195px;
-  margin-right: -57px;
   &__item {
     position: relative;
     width: calc(25% - 57px);

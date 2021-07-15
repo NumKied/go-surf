@@ -6,3 +6,11 @@
     right: -160px;
   }
 }
+
+.sleep-slider {
+  .slider-item {
+    &__sleep-info {
+      margin-right: -57px;
+    }
+  }
+}

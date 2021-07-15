@@ -2,7 +2,8 @@ const shoresList = $('.shores-list')[0].children,
       shoresItems = [...$('.shore-active'), ...$('.shore-name'), ...$('.shore-path')],
       surfMapDots = $('.surf-location__dot'),
       surfNextSlideArrow = $('.surf-next-arrow')[0],
-      surfPrevSlideArrow = $('.surf-prev-arrow')[0];
+      surfPrevSlideArrow = $('.surf-prev-arrow')[0],
+      surfboardDetails = $('.surfboard-detail__circle');
 
 // Hero slider
 $('.hero-slick-slider').slick({
@@ -120,3 +121,18 @@ const calculateTotalPrice = idNumber => {
     calculateTotalPrice(i);
   }
 })();
+
+// Shop slider
+$('.shop-slick-slider').slick({
+  infinite: true,
+  fade: true,
+  prevArrow: $('.shop-prev-arrow'),
+  nextArrow: $('.shop-next-arrow')
+});
+
+for (let i = 0; i < surfboardDetails.length; i++) {
+  surfboardDetails[i].addEventListener('click', event => {
+    $(event.target).toggleClass('active');
+    $(event.target.parentNode).toggleClass('active');
+  });
+}
